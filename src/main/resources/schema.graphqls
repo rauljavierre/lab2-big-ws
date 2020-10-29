@@ -1,0 +1,106 @@
+type Query {
+    "Translates a string from a given language into a different language."
+    getTranslationRequest(
+        "The original language that `text` is provided in."
+        langFrom: Language
+
+        "The translated language to be returned."
+        langTo: Language
+
+        "The text to be translated."
+        text: String): String
+}
+
+enum Language {
+    AFRIKAANS
+    ALBANIAN
+    AMHARIC
+    ARABIC
+    ARMENIAN
+    AZERBAIJANI
+    BASQUE
+    BELARUSIAN
+    BENGALI
+    BIHARI
+    BULGARIAN
+    BURMESE
+    CATALAN
+    CHEROKEE
+    CHINESE
+    CHINESE_SIMPLIFIED
+    CHINESE_TRADITIONAL
+    CROATIAN
+    CZECH
+    DANISH
+    DHIVEHI
+    DUTCH
+    ENGLISH
+    ESPERANTO
+    ESTONIAN
+    FILIPINO
+    FINNISH
+    FRENCH
+    GALICIAN
+    GEORGIAN
+    GERMAN
+    GREEK
+    GUARANI
+    GUJARATI
+    HEBREW
+    HINDI
+    HUNGARIAN
+    ICELANDIC
+    INDONESIAN
+    INUKTITUT
+    IRISH
+    ITALIAN
+    JAPANESE
+    KANNADA
+    KAZAKH
+    KHMER
+    KOREAN
+    KURDISH
+    KYRGYZ
+    LAOTHIAN
+    LATVIAN
+    LITHUANIAN
+    MACEDONIAN
+    MALAY
+    MALAYALAM
+    MALTESE
+    MARATHI
+    MONGOLIAN
+    NEPALI
+    NORWEGIAN
+    ORIYA
+    PASHTO
+    PERSIAN
+    POLISH
+    PORTUGUESE
+    PUNJABI
+    ROMANIAN
+    RUSSIAN
+    SANSKRIT
+    SERBIAN
+    SINDHI
+    SINHALESE
+    SLOVAK
+    SLOVENIAN
+    SPANISH
+    SWAHILI
+    SWEDISH
+    TAJIK
+    TAMIL
+    TAGALOG
+    TELUGU
+    THAI
+    TIBETAN
+    TURKISH
+    UKRANIAN
+    URDU
+    UZBEK
+    UIGHUR
+    VIETNAMESE
+    WELSH
+    YIDDISH
+}
