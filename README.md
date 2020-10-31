@@ -7,6 +7,11 @@
 ```
 {
     getTranslationRequest(langFrom: SPANISH, langTo: ENGLISH, text: "Hola, me llamo Raúl y tengo 21 años")
+        {
+            resultCode
+		    translation
+		    errorMsg	
+        }
 }
 ```
 
@@ -14,7 +19,11 @@
 ```
 {
     "data": {
-        "getTranslationRequest": "Hello, my name is Raúl and I'm 21 years old"
+        "getTranslationRequest": {
+            "resultCode": 200,
+            "translation": "Hello, my name is Raúl and I'm 21 years old",
+            "errorMsg": ""
+        }
     }
 }
 ```
@@ -25,21 +34,34 @@
 ```
 {
     getTranslationRequest(langFrom: ENGLISH, langTo: SPANISH, text: "Hello, my name is Raúl and I'm 21 years old")
+        {
+            resultCode
+		    translation
+		    errorMsg	
+        }
 }
 ```
 
 ```
 {
     "data": {
-        "getTranslationRequest": "Hola, me llamo Raúl y tengo 21 años"
+        "getTranslationRequest": {
+            "resultCode": 200,
+            "translation": "Hola, me llamo Raúl y tengo 21 años",
+            "errorMsg": ""
+        }
     }
 }
-
 ```
 ### Query (non-existing to Spanish):
 ```
 {
     getTranslationRequest(langFrom: NON_EXISTING_LANGUAGE, langTo: SPANISH, text: "Hafli, faklsk Raúl y ten 21 an")
+        {
+            resultCode
+		    translation
+		    errorMsg	
+        }
 }
 ```
 
@@ -63,6 +85,11 @@
 ```
 {
     getTranslationRequest(langFrom: AFRIKAANS, langTo: SPANISH, text: "Hallo, my naam is Raúl en ek is 21 jaar oud")
+        {
+            resultCode
+            translation
+            errorMsg	
+        }
 }
 ```
 
@@ -70,7 +97,11 @@
 ```
 {
     "data": {
-        "getTranslationRequest": "Sorry, but we can't translate 'Hallo, my naam is Raúl en ek is 21 jaar oud' from AFRIKAANS to SPANISH"
+        "getTranslationRequest": {
+            "resultCode": 404,
+            "translation": "",
+            "errorMsg": "Sorry, but we can't translate 'Hallo, my naam is Raúl en ek is 21 jaar oud' from AFRIKAANS to SPANISH"
+        }
     }
 }
 ```
@@ -93,6 +124,9 @@ query LearnAboutSchema {
             }
           }
       }
+    }
+    types {
+        name
     }
   }
   __type(name: "Language") {
@@ -138,7 +172,51 @@ query LearnAboutSchema {
                         ]
                     }
                 ]
-            }
+            },
+            "types": [
+                {
+                    "name": "__TypeKind"
+                },
+                {
+                    "name": "__Field"
+                },
+                {
+                    "name": "Query"
+                },
+                {
+                    "name": "__Schema"
+                },
+                {
+                    "name": "__Type"
+                },
+                {
+                    "name": "__EnumValue"
+                },
+                {
+                    "name": "__DirectiveLocation"
+                },
+                {
+                    "name": "String"
+                },
+                {
+                    "name": "Int"
+                },
+                {
+                    "name": "Language"
+                },
+                {
+                    "name": "ResponseDTO"
+                },
+                {
+                    "name": "__InputValue"
+                },
+                {
+                    "name": "Boolean"
+                },
+                {
+                    "name": "__Directive"
+                }
+            ]
         },
         "__type": {
             "name": "Language",

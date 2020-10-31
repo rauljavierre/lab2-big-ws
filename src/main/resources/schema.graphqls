@@ -8,7 +8,13 @@ type Query {
         langTo: Language
 
         "The text to be translated."
-        text: String): String
+        text: String): ResponseDTO
+}
+
+type ResponseDTO {
+    resultCode: Int
+    translation: String
+    errorMsg: String
 }
 
 enum Language {
