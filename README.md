@@ -81,6 +81,8 @@
     ]
 }
 ```
+<br />
+
 ### Query (non-implemented to Spanish):
 ```
 {
@@ -499,6 +501,8 @@ query LearnAboutSchema {
     }
 }
 ```
+
+<br />
 
 
 ### Inspired by:
